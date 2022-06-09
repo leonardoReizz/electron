@@ -1,4 +1,5 @@
 module.exports = [
+ 
   {
     test: /\.s[ac]ss$/i,
     use: [
