@@ -1,12 +1,9 @@
-import { GlobalStyle } from './styles/GlobalStyle'
-
-import { Greetings } from './components/Greetings'
+import "./styles/global.sass"
 
 export function App() {
   return (
     <>
-      <GlobalStyle />
-      <Greetings />
+      <h1>OLA MUNDO</h1>
     </>
   )
 }
