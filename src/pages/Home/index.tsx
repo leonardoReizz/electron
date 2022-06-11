@@ -8,7 +8,7 @@ export function Home(){
     return (
     <>
         OLA HOME
-        <Link to="/" replace>LOGIn</Link>
+        <Link to="/" replace>Acessar Login</Link>
     </>
     )
 }
