@@ -1,5 +1,4 @@
 import { Routes, Route, HashRouter} from "react-router-dom"
-import React from "react";
 import { Home } from "./pages/Home"
 
 export const AppRoutes = () => {
