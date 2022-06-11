@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { Link } from "react-router-dom"
 
 export function Home(){
     useEffect(()=>{
@@ -6,6 +7,8 @@ export function Home(){
     },[])
     return (
     <>
+        OLA HOME
+        <Link to="/" replace>LOGIn</Link>
     </>
     )
 }
