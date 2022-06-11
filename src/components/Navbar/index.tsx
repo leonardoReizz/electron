@@ -8,7 +8,11 @@ export function Navbar(){
                <li>ASDASD </li>
                <li>ASDASD</li>
                <li>ASDsdasd</li>
-            </ul> 
+            </ul>
+            <ul>
+                <li>gay</li>
+            </ul>
+               
         </>
     )
 }
