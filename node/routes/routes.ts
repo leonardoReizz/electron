@@ -1,7 +1,11 @@
 import Router from 'express'
+import { salesRouter } from './sales.routes'
 
 const routes = Router()
 
-routes.use("/users")
+
+
+routes.use("/sales", salesRouter)
+
 
 export { routes }

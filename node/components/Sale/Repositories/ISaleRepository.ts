@@ -6,7 +6,9 @@ interface ISale {
     total: number,
     totalPaid: number,
     formPayment: string,
-    createdAt: Date
+    createdAt: Date,
+    updateAt: Date
+
 }
 
 export { ISale }
