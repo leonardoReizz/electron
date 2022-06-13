@@ -6,9 +6,6 @@ import { listSalesController } from "../components/Sales/UseCases/ListSales"
 import { updateSaleController } from "../components/Sales/UseCases/UpdateSale"
 
 
-
-
-
 const salesRouter = Router()
 
 

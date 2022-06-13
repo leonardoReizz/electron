@@ -1,34 +1,47 @@
 import { useEffect } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-
+import { Link, Navigate, useLinkClickHandler, useNavigate } from "react-router-dom";
 import * as yup from "yup"
+import Axios from "axios"; 
 
 import styles from "./styles.module.sass"
-import { Message } from 'discord.js'
-import { Link } from 'react-router-dom'
+import { Home } from '../Home';
 
 type Login = {
-    user: string,
+    username: string,
     password: string
 }
 
 export function Login(){
+    const navigate = useNavigate();
+     
     useEffect(()=>{
         document.title = "System - Entrar"
     },[])
     
     const schema = yup.object({
-        user: yup.string().required("Campo Obrigatorio").max(24, "Maximo 24 Caracteres"),
+        username: yup.string().required("Campo Obrigatorio").max(24, "Maximo 24 Caracteres"),
         password: yup.string().required("Campo Obrigatorio").max(24,"Maximo 24 Caracteres")
     })
-    const{ register , handleSubmit, formState: {errors}} = useForm<Login>({
+    const{ register , getValues, handleSubmit, formState: {errors}} = useForm<Login>({
         resolver: yupResolver(schema)
     });
 
 
     const onSubmit: SubmitHandler<Login> = data => {
-
+        Axios.post("http://localhost:3333/sellers/login  ", {
+            username: getValues("username"),
+            pass: getValues("password")
+        })
+        .then(( res ) => {
+            localStorage.setItem( 'user', JSON.stringify( res.data.result.data ) );
+            sessionStorage.setItem( 'token', JSON.stringify( res.data.result.token ) );
+            navigate('/home');
+        })
+        .catch(( err ) => {
+            console.log( err );    
+        })
     }
     return (
         <>
@@ -40,9 +53,9 @@ export function Login(){
                             <input 
                             type="text" 
                             placeholder="Usuario"
-                            {...register("user")}
+                            {...register("username")}
                             />
-                            <p>{errors.user?.message}</p>
+                            <p>{errors.username?.message}</p>
                             <input 
                             type="password" 
                             placeholder="Senha"
