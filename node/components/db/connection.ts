@@ -1,5 +1,6 @@
 import mysql from 'mysql'
 class Connection {
+    
     create() : mysql.Pool {
         const db =  mysql.createPool({
             host: "189.17.218.10",
@@ -11,9 +12,6 @@ class Connection {
 
         return db
     }
-
-
-
 }
 
 
