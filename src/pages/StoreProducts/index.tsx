@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { useEffect } from "react"
 import styles from "./styles.module.sass"
 
@@ -79,5 +79,5 @@ export function StoreProducts(){
         </>
     )
 }
-=======
->>>>>>> c46d6828ee56dc960313bbef8d3604a334be0021
+
+
