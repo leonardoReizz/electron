@@ -103,31 +103,58 @@
     width: 150px
     .content
       .navbar
-
         .box
-          
-          width: 82px
-
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 100px
+          .boxIcon
+            margin: 0
           .boxTitle
             display: none
       .exitMenu
         width: 150px
             
-      @media (max-height: 680px)
+      @media (max-height: 840px)
         .navbar
           .box
             margin-top: .5rem
             height: 75px
+            width: 85px
+            
             h2
               font-size: 1.3rem 
             .boxIcon
+              margin: 0
               padding: 1.5rem
+              
+        .exitMenu
+            img
+              width: 20px
+            p
+              font-size: 1rem
+      @media (max-height: 620px)
+        .navbar
+          .box
+            margin-top: .5rem
+            height: 60px
+            width: 70px
+
+            h2
+              font-size: 1.3rem 
+            .boxIcon
+              padding: 1.2rem
+              margin: 0
+              img
+                width: 25px
+
         .exitMenu
             img
               width: 20px
             p
               font-size: 1rem
 
+  
 
       
 
