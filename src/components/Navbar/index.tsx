@@ -1,18 +1,28 @@
 import { Link } from "react-router-dom"
 import styles from "./styles.module.sass"
 
+import exitIcon from "../../../public/assets/navbar/exit.png"
+import cashRegisterIcon from "../../../public/assets/navbar/cash-register.png"
+import deliveryIcon from "../../../public/assets/navbar/delivery.png"
+import chairIcon from "../../../public/assets/navbar/chair.png"
+import clientIcon from "../../../public/assets/navbar/client.png"
+import inventoryIcon from "../../../public/assets/navbar/inventory.png"
+import repostsIcon from "../../../public/assets/navbar/reposts.png"
+
+
 export function Navbar(){
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.content}>
+                    <div className={styles.navbar}>
                     <div className={styles.logo}>
                         <h2>LOGO</h2>
                     </div> 
                     <Link to="/storeproducts">
                         <div className={styles.box}>
                             <div className={styles.boxIcon}>
-                                <img src="" alt="" />a
+                                <img src={cashRegisterIcon} alt="" />
                             </div>
                             <div className={styles.boxTitle}>
                                 <h2>Caixa</h2>
@@ -20,10 +30,10 @@ export function Navbar(){
                             </div>
                         </div>  
                     </Link>
-                    <Link to="/storeproducts">
+                    <Link to="/delivery">
                         <div className={styles.box}>
                             <div className={styles.boxIcon}>
-                                <img src="" alt="" />
+                                <img src={deliveryIcon} alt="" />
                             </div>
                             <div className={styles.boxTitle}>
                                 <h2>Delivery</h2>
@@ -31,10 +41,10 @@ export function Navbar(){
                             </div>
                         </div>  
                     </Link>   
-                    <Link to="/storeproducts">
+                    <Link to="/tables">
                         <div className={styles.box}>
                             <div className={styles.boxIcon}>
-                                <img src="" alt="" />
+                                <img src={chairIcon} alt="" />
                             </div>
                             <div className={styles.boxTitle}>
                                 <h2>Mesas</h2>
@@ -42,10 +52,10 @@ export function Navbar(){
                             </div>
                         </div>  
                     </Link> 
-                    <Link to="/storeproducts">
+                    <Link to="/clients">
                         <div className={styles.box}>
                             <div className={styles.boxIcon}>
-                                <img src="" alt="" />
+                                <img src={clientIcon} alt="" />
                             </div>
                             <div className={styles.boxTitle}>
                                 <h2>Clientes</h2>
@@ -53,10 +63,10 @@ export function Navbar(){
                             </div>
                         </div>  
                     </Link> 
-                    <Link to="/storeproducts">
+                    <Link to="/inventory">
                         <div className={styles.box}>
                             <div className={styles.boxIcon}>
-                                <img src="" alt="" />
+                                <img src={inventoryIcon} alt="" />
                             </div>
                             <div className={styles.boxTitle}>
                                 <h2>Estoque</h2>
@@ -64,17 +74,24 @@ export function Navbar(){
                             </div>
                         </div>  
                     </Link> 
-                    <Link to="/storeproducts">
+                    <Link to="/reports">
                         <div className={styles.box}>
                             <div className={styles.boxIcon}>
-                                <img src="" alt="" />
+                                <img src={repostsIcon} alt="" />
                             </div>
                             <div className={styles.boxTitle}>
                                 <h2>Relatorios</h2>
                                 <p>Seu relatório de vendas</p>
                             </div>
                         </div>  
-                    </Link>    
+                    </Link>  
+                    </div>
+                    <Link to="/logout">
+                        <div className={styles.exitMenu}>
+                            <img src={exitIcon} alt="sair" />
+                            <p>Sair</p>
+                        </div>
+                    </Link>  
                 </div>
             </div>  
         </>

@@ -7,7 +7,6 @@ export function StoreProducts(){
     },[])
     return (
         <> 
-
             <div className={styles.container}> {/* global */}
                 <div className={styles.content}> {/* centralizar a pagina */}
                     <div className={styles.limit}> {/* max-with: ; width:100% */}
