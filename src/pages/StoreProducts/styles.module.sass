@@ -1,16 +1,19 @@
 @use '../../styles/_util' as *
 
 .container
-    height: 100vw
+    height: 100vh
     margin-left: 280px
 
     .content
-      border: 1px solid $white 
+        display: flex
+        justify-content: center
+        align-items: center
 
     .limit
         max-width: 1280px
     
     .gridProducts
+        border: 1px solid $white 
         max-width: 785px
         display: grid
         grid-template-columns: repeat(4, 1fr)
