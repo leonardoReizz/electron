@@ -1,7 +1,8 @@
 @use '../../styles/_util' as *
 
 .container
-    height: 100vh
+    background: $blue-200
+    height: 100vw
     margin-left: 250px
 
     .content
@@ -9,9 +10,9 @@
       justify-content: center
       align-items: center
     
-    .gridProducts 
+    .gridProducts
+        background: $gray-600
         display: grid
-        color: $blue-200
-
-    .item
-        color: $blue-200
+        
+        .item
+            color: $white
