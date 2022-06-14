@@ -14,10 +14,10 @@ export function StoreProducts(){
 
                         <div className={styles.boxOptions}>
                             <ul className={styles.listOptions}>
-                                <li className={styles.itemOptions}><a href="#">Bebidas</a></li>
-                                <li className={styles.itemOptions}> <a href="#">Sobremesas</a></li>
-                                <li className={styles.itemOptions}><a href="#">Pratos</a></li>
-                                <li className={styles.itemOptions}><a href="#">Salgados</a></li>
+                                <li className={styles.itemOptions}><a href="https://youtu.be/gkTb9GP9lVI?t=26">Bebidas</a></li>
+                                <li className={styles.itemOptions}><a href="https://youtu.be/gkTb9GP9lVI?t=26">Sobremesas</a></li>
+                                <li className={styles.itemOptions}><a href="https://youtu.be/gkTb9GP9lVI?t=26">Pratos</a></li>
+                                <li className={styles.itemOptions}><a href="https://youtu.be/gkTb9GP9lVI?t=26">Salgados</a></li>
                             </ul>
 
                         </div>

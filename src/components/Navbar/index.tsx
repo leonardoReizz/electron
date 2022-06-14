@@ -12,7 +12,7 @@ export function Navbar(){
                     <Link to="/storeproducts">
                         <div className={styles.box}>
                             <div className={styles.boxIcon}>
-                                <img src="" alt="" />a
+                                <img src="" alt="" />
                             </div>
                             <div className={styles.boxTitle}>
                                 <h2>Caixa</h2>
