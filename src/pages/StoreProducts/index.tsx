@@ -26,7 +26,6 @@ export function StoreProducts(){
                                 <h1>1</h1>
                             </div>
                             
-
                         </div>
                     </div>
                 </div>

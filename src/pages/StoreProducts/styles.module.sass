@@ -1,8 +1,16 @@
-.container 
-    display: flex
-    align-items: center
-    justify-content: center
-    background: white   
-    margin-left: 250px  
+@use '../../styles/_util' as *
 
+.container
+    height: 100vh
+    margin-left: 250px
+
+    .content
+      display: flex
+      justify-content: center
+      align-items: center
     
+    .gridProducts 
+        display: grid
+
+    .iten
+        color: $blue-200
