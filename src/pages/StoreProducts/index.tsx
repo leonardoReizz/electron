@@ -13,10 +13,19 @@ export function StoreProducts(){
                     <div className={styles.limit}> {/* max-with: ; width:100% */}
                         <div className={styles.gridProducts}>
 
-                            <div className={styles.item}></div>
-                            <div className={styles.item}></div>
-                            <div className={styles.item}></div>
-                            <div className={styles.item}></div>
+                            <div className={styles.item}>
+                                <h1>1</h1>
+                            </div>
+                            <div className={styles.item}>
+                                <h1>1</h1>
+                            </div>
+                            <div className={styles.item}>
+                                <h1>1</h1>
+                            </div>
+                            <div className={styles.item}>
+                                <h1>1</h1>
+                            </div>
+                            
 
                         </div>
                     </div>
