@@ -1,6 +1,4 @@
-import e, { Request, Response } from "express";
-import { Product } from "../../Model/Product";
-import { IProductsRepository } from "../../Repositories/IProductsRepository";
+import { Request, Response } from "express";
 import { ICreateProductsRequestDTO } from "./CreateProductsRequestDTO";
 import { CreateProductsUseCase } from "./CreateProductsUseCase";
 

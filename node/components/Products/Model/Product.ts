@@ -2,6 +2,7 @@ class Product {
     id?: number;
     nameProduct?: string;
     codebar?: string;
+    urlImage?: string;
     createdAt?: Date;
     updateAt?: Date;
 
