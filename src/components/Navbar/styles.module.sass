@@ -16,7 +16,6 @@
         flex-direction: column
         align-items: center
 
-
         .logo  
           margin-top: 2rem
           margin-bottom: 2rem
@@ -64,6 +63,7 @@
             border-radius: 8rem
             margin-right: 1rem
             padding: 2rem
+
             img
               vertical-align: middle
              
@@ -78,13 +78,15 @@
             filter: brightness(0.8)
 
       .exitMenu
-        width: 280px
         display: flex
         align-items: center
         justify-content: center
         position: absolute
+        
+        width: 280px
         bottom: 2rem
         left:0
+
         img
           margin-right: 1rem
           max-width: 50px
@@ -96,8 +98,36 @@
 
         &:hover
           filter: brightness(0.8)
-        
+@media (max-width: 1366px)
+  .container
+    width: 150px
+    .content
+      .navbar
+
+        .box
           
+          width: 82px
+
+          .boxTitle
+            display: none
+      .exitMenu
+        width: 150px
+            
+      @media (max-height: 680px)
+        .navbar
+          .box
+            margin-top: .5rem
+            height: 75px
+            h2
+              font-size: 1.3rem 
+            .boxIcon
+              padding: 1.5rem
+        .exitMenu
+            img
+              width: 20px
+            p
+              font-size: 1rem
+
 
       
 
