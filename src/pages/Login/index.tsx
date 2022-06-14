@@ -1,12 +1,11 @@
 import { useEffect } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { Link, Navigate, useLinkClickHandler, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as yup from "yup"
 import Axios from "axios"; 
 
 import styles from "./styles.module.sass"
-import { Home } from '../Home';
 
 type Login = {
     username: string,
@@ -21,18 +20,17 @@ export function Login(){
     },[])
     
     const schema = yup.object({
-        username: yup.string().required("Campo Obrigatorio").max(24, "Maximo 24 Caracteres"),
-        password: yup.string().required("Campo Obrigatorio").max(24,"Maximo 24 Caracteres")
-    })
-    const{ register , getValues, handleSubmit, formState: {errors}} = useForm<Login>({
-        resolver: yupResolver(schema)
+        username: yup.string().required( "Campo Obrigatorio" ).max( 24, "Maximo 24 Caracteres" ),
+        password: yup.string().required( "Campo Obrigatorio" ).max( 12, "Maximo 12 Caracteres" )
     });
-
+    const{ register , handleSubmit, formState: { errors } } = useForm<Login>({
+        resolver: yupResolver( schema )
+    });
 
     const onSubmit: SubmitHandler<Login> = data => {
         Axios.post("http://localhost:3333/sellers/login  ", {
-            username: getValues("username"),
-            pass: getValues("password")
+            username: data.username,
+            pass: data.password
         })
         .then(( res ) => {
             localStorage.setItem( 'user', JSON.stringify( res.data.result.data ) );
