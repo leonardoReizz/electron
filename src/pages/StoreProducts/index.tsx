@@ -10,7 +10,7 @@ export function StoreProducts(){
 
             <div className={styles.container}> {/* global */}
                 <div className={styles.content}> {/* centralizar a pagina */}
-                    <div className={styles.limit}> {/* max-with: ; width:100% */}
+                    <div className={styles.limit}> {/* max-with: ; width:Editar00% */}
 
                         <div className={styles.boxOptions}>
                             <ul className={styles.listOptions}>
@@ -25,52 +25,52 @@ export function StoreProducts(){
 
                         <div className={styles.gridProducts}>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
                             <div className={styles.item}>
-                                <h2>1</h2>
+                                <h2>Editar</h2>
                             </div>
            
                         </div>
