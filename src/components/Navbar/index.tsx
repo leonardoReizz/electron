@@ -16,7 +16,7 @@ export function Navbar(){
                             </div>
                             <div>
                                 <h2>Caixa</h2>
-                                <p>Seu painel de vendas</p>
+                                <p>Seu painel de endas</p>
                             </div>
                         </div>  
                     </Link>
