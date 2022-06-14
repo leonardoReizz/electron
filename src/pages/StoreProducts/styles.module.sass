@@ -12,10 +12,11 @@
     
     .gridProducts
         display: grid
-        grid-template-columns: 20% 20% 20% 20% 20%
-        grid-template-rows: 20% 20% 20% 20% 20%
+        grid-template-coluns: repeat 
         background: $gray-600
         
         .item
+            grid-column: 1 / 6;
+            grid-row: 5 / 6;
             width: 40px 
             color: $white
