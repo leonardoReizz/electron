@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect } from "react"
 import styles from "./styles.module.sass"
 
@@ -70,8 +71,7 @@ export function StoreProducts(){
                             </div>
                             <div className={styles.item}>
                                 <h2>Editar</h2>
-                            </div>
-           
+                            </div>          
                         </div>
                     </div>
                 </div>
@@ -79,3 +79,5 @@ export function StoreProducts(){
         </>
     )
 }
+=======
+>>>>>>> c46d6828ee56dc960313bbef8d3604a334be0021
