@@ -11,10 +11,10 @@ export function Navbar(){
                     </div> 
                     <Link to="/storeproducts">
                         <div className={styles.box}>
-                            <div>
-                                <img src="" alt="" />
+                            <div className={styles.boxIcon}>
+                                <img src="" alt="" />a
                             </div>
-                            <div>
+                            <div className={styles.boxTitle}>
                                 <h2>Caixa</h2>
                                 <p>Seu painel de vendas</p>
                             </div>
@@ -22,10 +22,10 @@ export function Navbar(){
                     </Link>
                     <Link to="/storeproducts">
                         <div className={styles.box}>
-                            <div>
+                            <div className={styles.boxIcon}>
                                 <img src="" alt="" />
                             </div>
-                            <div>
+                            <div className={styles.boxTitle}>
                                 <h2>Delivery</h2>
                                 <p>Seu painel de pedidos</p>
                             </div>
@@ -33,10 +33,10 @@ export function Navbar(){
                     </Link>   
                     <Link to="/storeproducts">
                         <div className={styles.box}>
-                            <div>
+                            <div className={styles.boxIcon}>
                                 <img src="" alt="" />
                             </div>
-                            <div>
+                            <div className={styles.boxTitle}>
                                 <h2>Mesas</h2>
                                 <p>Seu painel de mesas</p>
                             </div>
@@ -44,10 +44,10 @@ export function Navbar(){
                     </Link> 
                     <Link to="/storeproducts">
                         <div className={styles.box}>
-                            <div>
+                            <div className={styles.boxIcon}>
                                 <img src="" alt="" />
                             </div>
-                            <div>
+                            <div className={styles.boxTitle}>
                                 <h2>Clientes</h2>
                                 <p>Seu registro de clientes</p>
                             </div>
@@ -55,10 +55,10 @@ export function Navbar(){
                     </Link> 
                     <Link to="/storeproducts">
                         <div className={styles.box}>
-                            <div>
+                            <div className={styles.boxIcon}>
                                 <img src="" alt="" />
                             </div>
-                            <div>
+                            <div className={styles.boxTitle}>
                                 <h2>Estoque</h2>
                                 <p>Veja seu estoque</p>
                             </div>
@@ -66,10 +66,10 @@ export function Navbar(){
                     </Link> 
                     <Link to="/storeproducts">
                         <div className={styles.box}>
-                            <div>
+                            <div className={styles.boxIcon}>
                                 <img src="" alt="" />
                             </div>
-                            <div>
+                            <div className={styles.boxTitle}>
                                 <h2>Relatorios</h2>
                                 <p>Seu relatório de vendas</p>
                             </div>
