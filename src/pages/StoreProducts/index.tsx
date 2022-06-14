@@ -70,8 +70,7 @@ export function StoreProducts(){
                             </div>
                             <div className={styles.item}>
                                 <h2>Editar</h2>
-                            </div>
-           
+                            </div>          
                         </div>
                     </div>
                 </div>
