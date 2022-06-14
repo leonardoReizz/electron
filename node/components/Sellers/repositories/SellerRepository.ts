@@ -3,7 +3,7 @@ import { Seller } from "../Model/Seller";
 import { ISellerRepository } from "./ISellerRepository";
 class SellerRepository implements ISellerRepository{
     async login (data : Seller ) : Promise<Seller[]> {
-        let sqlQuery = "SELECT *, NULL as pass  FROM sellers WHERE username = ? and pass = ?"
+        let sqlQuery = "SELECT *, NULL as pass  FROM sellers WHERE username = ? and pass = ?s"
         const db = new Connection().create();
 
         const result: Seller[] = await new Promise(( resolve, reject ) =>  {
