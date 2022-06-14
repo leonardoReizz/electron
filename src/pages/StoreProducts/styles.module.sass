@@ -1,26 +1,22 @@
 @use '../../styles/_util' as *
 
 .container
-    background: $blue-200
     height: 100vw
     margin-left: 250px
 
     .content
-      display: flex
-      justify-content: center
-      align-items: center
+
+      background: $gray-600
     
     .gridProducts
-        padding-top: 10px
+        padding: 10px
         display: grid
         width: 100%
-        max-width: 750px
-        margin: 0 auto
-        grid-template-columns: repeat(4, 2fr)
+        grid-template-columns: repeat(4, 1fr)
         grid-gap: 20px
-        background: $gray-600
         
-        .item
+        .item  
+            text-align: center
             background: gray
             color: white
             font-size: 10px
