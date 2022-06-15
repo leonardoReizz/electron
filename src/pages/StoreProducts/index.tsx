@@ -1,11 +1,29 @@
 
-import { useEffect } from "react"
+import  Axios  from "axios"
+import { useCallback, useEffect, useState } from "react"
 import styles from "./styles.module.sass"
 
+interface productsProps{
+    id:number
+    nameProduct:string
+}
+
+
 export function StoreProducts(){
+    const[res, setRes] = useState<productsProps>()
+
+    const getProducts=useCallback(async()=>{
+        await Axios.get("http://localhost:3333/products/")
+        .then((resposta) => {
+            console.log(resposta.data)
+            setRes(resposta.data)})
+    },[])
+
     useEffect(()=>{
         document.title = "O Titulo da Pagina"
-    },[])
+        getProducts()
+        console.log(res?.nameProduct)
+    },[getProducts])
     return (
         <> 
             <div className={styles.container}> {/* global */}
@@ -22,7 +40,9 @@ export function StoreProducts(){
 
                         </div>
 
-
+                        {
+                            res?.id + " " + res?.nameProduct     
+                        }
                         <div className={styles.gridProducts}>
                             <div className={styles.item}>
                                 <h2>Editar</h2>
