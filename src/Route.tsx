@@ -8,7 +8,6 @@ import { Login } from "./pages/Login"
 import Reports from "./pages/Reports"
 import { StoreProducts } from "./pages/StoreProducts"
 import { Tables } from "./pages/Tables"
-import { Ticket } from "./pages/Ticket"
 
 export const AppRoutes = () => {
     return (
