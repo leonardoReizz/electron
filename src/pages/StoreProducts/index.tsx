@@ -19,9 +19,7 @@ export function StoreProducts(){
                                 <li className={styles.itemOptions}><a href="https://youtu.be/gkTb9GP9lVI?t=26">Pratos</a></li>
                                 <li className={styles.itemOptions}><a href="https://youtu.be/gkTb9GP9lVI?t=26">Salgados</a></li>
                             </ul>
-
                         </div>
-
 
                         <div className={styles.gridProducts}>
                             <div className={styles.item}>
