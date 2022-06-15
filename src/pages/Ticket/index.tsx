@@ -1,9 +1,0 @@
-
-export function Ticket () {
-    return (
-        <>
-
-
-        </>
-    )
-}
