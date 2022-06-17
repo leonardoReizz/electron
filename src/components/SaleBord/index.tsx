@@ -130,9 +130,9 @@ export function SaleBord() {
                                 <h3>Total</h3>
                                 <p>R$ 220,00</p>
                             </div>
-                            <div className={ styles.buttons }>
-                                <button> Finalizar </button>
-                                <button> Cancelar </button>
+                            <div className={ styles.buttons}>
+                                <button className={styles.btnFinish}> Finalizar </button>
+                                <button className={styles.btnCancel}> Cancelar </button>
                             </div>
                         </div>
                     </div>
