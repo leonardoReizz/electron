@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { useEffect, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -47,7 +48,7 @@ export function Login(){
             <div className={styles.container}>
                 <div className={styles.content}>
                     <div className={styles.limit}>
-                        <h1>SoftSystem</h1>
+                        <h1>Easy System</h1>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input 
                             type="text" 
@@ -62,7 +63,7 @@ export function Login(){
                             />
                             <p>{errors.password?.message}</p>
                             <button>Login</button>
-                            <Link to="/home">Acessar Home</Link>
+                            <Link to="/home">Home</Link>
                         </form>  
                     </div>
                 </div>
