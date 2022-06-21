@@ -14,18 +14,12 @@ type Login = {
 }
 
 // eslint-disable-next-line no-redeclare
-export function Login(){
-    
-
+export function Login(){ 
     useEffect(()=>{
         document.title = "TITUTLO DA PAGINA"
     },[])
 
-
-    const navigate = useNavigate();
-     
-    
-    
+    const navigate = useNavigate();    
     const schema = yup.object({
         username: yup.string().required( "Campo Obrigatorio" ).max( 24, "Maximo 24 Caracteres" ),
         password: yup.string().required( "Campo Obrigatorio" ).max( 12, "Maximo 12 Caracteres" )
