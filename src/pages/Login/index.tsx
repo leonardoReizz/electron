@@ -7,11 +7,13 @@ import Axios from "axios";
 
 import styles from "./styles.module.sass"
 
+// eslint-disable-next-line no-unused-vars
 type Login = {
     username: string,
     password: string,
 }
 
+// eslint-disable-next-line no-redeclare
 export function Login(){
     
 
