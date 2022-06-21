@@ -1,10 +1,13 @@
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import styles from "./styles.module.sass"
 
 export function StoreProducts(){
+    
+
     useEffect(()=>{
         document.title = "O Titulo da Pagina"
+       
     },[])
     return (
         <> 

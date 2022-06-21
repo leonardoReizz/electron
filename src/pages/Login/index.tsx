@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Link, useNavigate } from "react-router-dom";
@@ -9,15 +9,20 @@ import styles from "./styles.module.sass"
 
 type Login = {
     username: string,
-    password: string
+    password: string,
 }
 
 export function Login(){
+    
+
+    useEffect(()=>{
+        document.title = "TITUTLO DA PAGINA"
+    },[])
+
+
     const navigate = useNavigate();
      
-    useEffect(()=>{
-        document.title = "System - Entrar"
-    },[])
+    
     
     const schema = yup.object({
         username: yup.string().required( "Campo Obrigatorio" ).max( 24, "Maximo 24 Caracteres" ),
