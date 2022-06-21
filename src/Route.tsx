@@ -16,8 +16,8 @@ export const AppRoutes = () => {
             <Routes>
                 <Route path="/" element={ <Login/> }/>
                 <Route path="/home" element = { <> <Navbar/> <Home/> </> } />
-                <Route path="/storeproducts" element={<> <Navbar/> <SaleBord/> <StoreProducts/> </> } />
-                <Route path="/saleboard" element={<> <StoreProducts/> </> } />
+                <Route path="/storeproducts" element={<> <Navbar/> <StoreProducts/> </> } />
+                <Route path="/saleboard" element={<> <StoreProducts/> <SaleBord/> </> } />
                 <Route path="/delivery" element = { <> <Navbar/> <Delivery/> </> } />
                 <Route path="/tables" element = { <> <Navbar/> <Tables/> </> }/>
                 <Route path="/clients" element = { <> <Navbar/> <Clients/> </> }/>
