@@ -42,7 +42,7 @@ export function SaleBoard() {
         }
     ]
     ,[] );
-    
+ 
     const columns = useColumns();
     const table = useTable({ columns, data }, useSortBy);
 
@@ -53,7 +53,6 @@ export function SaleBoard() {
         rows,
         prepareRow
     } = table;
-    
     
     return (
         <>
@@ -81,16 +80,14 @@ export function SaleBoard() {
                                         <tr {...headerGroup.getHeaderGroupProps()}>
                                         {headerGroup.headers.map((column) => (
                                             <th
-                                            {...column.getHeaderProps(column.getSortByToggleProps())}
-                                            className={
-                                                column.isSorted
-                                                ? column.isSortedDesc
-                                                    ? "desc"
-                                                    : "asc"
-                                                : ""
-                                            }
+                                                {...column.getHeaderProps(column.getSortByToggleProps())}
+                                                className={column.isSorted
+                                                    ? column.isSortedDesc
+                                                        ? "desc"
+                                                        : "asc"
+                                                    : ""}
                                             >
-                                            {column.render("Header")}
+                                                {column.render("Header")}
                                             </th>
                                         ))}
                                         </tr>
@@ -120,28 +117,7 @@ export function SaleBoard() {
                                     }
                                     </tbody>
                                 </table>
-
-
                             </div>
-<<<<<<< HEAD:src/components/SaleBord/index.tsx
-                            <div className={ styles.finalBoard }>
-                                <div className={ styles.subTotal }>
-                                    <h3>Total</h3>
-                                    <p>R$ 200,00</p>
-                                </div>
-                                <div className={ styles.subTotal }>
-                                    <h3>Taxa</h3>
-                                    <p>R$ 20,00</p>
-                                </div>
-                                <div className={ styles.total }>
-                                    <h3>Total</h3>
-                                    <p><span>R$</span> 220,00</p>
-                                </div>
-                                <div className={ styles.buttons }>
-                                    <button> Finalizar </button>
-                                    <button> Cancelar </button>
-                                </div>
-=======
                             <div className={ styles.subTotal }>
                                 <h3>Taxa</h3>
                                 <p>R$ 20,00</p>
@@ -155,7 +131,6 @@ export function SaleBoard() {
                                     <button className={styles.btnFinish}> Finalizar </button>
                                 </Link>
                                 <button className={styles.btnCancel}> Cancelar </button>
->>>>>>> 621bba1d34380e23752e5905657071082564d9b1:src/components/SaleBoard/index.tsx
                             </div>
                         </div>
                     </div>
