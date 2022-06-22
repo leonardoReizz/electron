@@ -64,7 +64,7 @@ export function SaleBoard() {
                             <div className={styles.boxNav}>
                                 <button>
                                     <img src="" alt="" />
-                                    Editar
+                                    Editarr
                                 </button>
                                 <button>
                                     <img src="" alt="" />
