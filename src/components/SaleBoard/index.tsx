@@ -1,5 +1,5 @@
 
-
+import { Link, link } from "react-router-dom";
 import { Axios } from "axios";
 import { access } from "original-fs";
 import { useEffect, useMemo, useState } from "react";
@@ -7,7 +7,7 @@ import { useFilters, useSortBy, useTable } from "react-table";
 import useColumns from "../../hooks/useColumns";
 import styles from "./styles.module.sass";
 
-export function SaleBord() {
+export function SaleBoard() {
     const data  = useMemo(() => 
     [
         {
@@ -123,6 +123,7 @@ export function SaleBord() {
 
 
                             </div>
+<<<<<<< HEAD:src/components/SaleBord/index.tsx
                             <div className={ styles.finalBoard }>
                                 <div className={ styles.subTotal }>
                                     <h3>Total</h3>
@@ -140,6 +141,21 @@ export function SaleBord() {
                                     <button> Finalizar </button>
                                     <button> Cancelar </button>
                                 </div>
+=======
+                            <div className={ styles.subTotal }>
+                                <h3>Taxa</h3>
+                                <p>R$ 20,00</p>
+                            </div>
+                            <div className={ styles.total }>
+                                <h3>Total</h3>
+                                <p>R$ 220,00</p>
+                            </div>
+                            <div className={ styles.buttons}>
+                                <Link to="/storeproducts">
+                                    <button className={styles.btnFinish}> Finalizar </button>
+                                </Link>
+                                <button className={styles.btnCancel}> Cancelar </button>
+>>>>>>> 621bba1d34380e23752e5905657071082564d9b1:src/components/SaleBoard/index.tsx
                             </div>
                         </div>
                     </div>

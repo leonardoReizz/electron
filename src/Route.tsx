@@ -1,5 +1,5 @@
 import {  Route, HashRouter, Routes} from "react-router-dom"
-import { SaleBord } from "./components/SaleBord"
+import { SaleBoard } from "./components/SaleBoard"
 import { Navbar } from "./components/Navbar"
 import { Clients } from "./pages/Clients"
 import { Delivery } from "./pages/Delivery"
@@ -16,7 +16,8 @@ export const AppRoutes = () => {
             <Routes>
                 <Route path="/" element={ <Login/> }/>
                 <Route path="/home" element = { <> <Navbar/> <Home/> </> } />
-                <Route path="/storeproducts" element={<> <Navbar/> <SaleBord/> <StoreProducts/> </> } />
+                <Route path="/storeproducts" element={<> <Navbar/> <StoreProducts/> </> } />
+                <Route path="/saleboard" element={<> <SaleBoard/> </> } />
                 <Route path="/delivery" element = { <> <Navbar/> <Delivery/> </> } />
                 <Route path="/tables" element = { <> <Navbar/> <Tables/> </> }/>
                 <Route path="/clients" element = { <> <Navbar/> <Clients/> </> }/>
