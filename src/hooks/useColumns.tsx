@@ -4,7 +4,7 @@ export default function useColumns() {
   const columns = useMemo(
     () => [
       {
-        Header: "QT",
+        Header: "QTD",
         accessor: "QT"
       },
       {

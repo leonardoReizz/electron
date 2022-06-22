@@ -1,16 +1,32 @@
+<<<<<<< HEAD
+
+import axios from "axios"
+import { useEffect, useState } from "react"
+=======
+>>>>>>> 621bba1d34380e23752e5905657071082564d9b1
 import styles from "./styles.module.sass"
 import { useEffect } from "react"
 import { SaleBoardModal } from "../../components/SaleBordModal";
 import { useModal } from "../../context/useModal";
 import { SaleBoard } from "../../components/SaleBoard";
 
+
+interface productsProps {
+    id: number
+}
+
 export function StoreProducts(){
+<<<<<<< HEAD
+
+   
+=======
     const{isOpenModal, openModal, closeModal} = useModal();
 
     useEffect(()=>{
         document.title = "O Titulo da Pagina"
     },[])
 
+>>>>>>> 621bba1d34380e23752e5905657071082564d9b1
     return (
         <>
         <SaleBoardModal/>
@@ -34,6 +50,13 @@ export function StoreProducts(){
                                     </div>
                                 </button>
 
+<<<<<<< HEAD
+                        <div className={styles.gridProducts}>
+                            <div className={styles.item}>
+                                <h2>
+                                   editar
+                                </h2>
+=======
                                 <div className={styles.item}>
                                     <h2>Editar</h2>
                                 </div>
@@ -93,6 +116,7 @@ export function StoreProducts(){
                                 <div className={styles.item}>
                                     <h2>Editar</h2>
                                 </div>
+>>>>>>> 621bba1d34380e23752e5905657071082564d9b1
                             </div>
                         </div>
                     </div>
