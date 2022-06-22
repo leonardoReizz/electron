@@ -1,5 +1,5 @@
 
-
+import { Link, link } from "react-router-dom";
 import { Axios } from "axios";
 import { access } from "original-fs";
 import { useEffect, useMemo, useState } from "react";
@@ -7,7 +7,7 @@ import { useFilters, useSortBy, useTable } from "react-table";
 import useColumns from "../../hooks/useColumns";
 import styles from "./styles.module.sass";
 
-export function SaleBord() {
+export function SaleBoard() {
     const data  = useMemo(() => 
     [
         {
@@ -131,7 +131,9 @@ export function SaleBord() {
                                 <p>R$ 220,00</p>
                             </div>
                             <div className={ styles.buttons}>
-                                <button className={styles.btnFinish}> Finalizar </button>
+                                <Link to="/storeproducts">
+                                    <button className={styles.btnFinish}> Finalizar </button>
+                                </Link>
                                 <button className={styles.btnCancel}> Cancelar </button>
                             </div>
                         </div>
