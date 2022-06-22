@@ -1,11 +1,16 @@
 
-import { useEffect } from "react"
+import axios from "axios"
+import { useEffect, useState } from "react"
 import styles from "./styles.module.sass"
 
+
+interface productsProps {
+    id: number
+}
+
 export function StoreProducts(){
-    useEffect(()=>{
-        document.title = "O Titulo da Pagina"
-    },[])
+
+   
     return (
         <> 
             <div className={styles.container}> {/* global */}
@@ -23,7 +28,9 @@ export function StoreProducts(){
 
                         <div className={styles.gridProducts}>
                             <div className={styles.item}>
-                                <h2>Editar</h2>
+                                <h2>
+                                   editar
+                                </h2>
                             </div>
                             <div className={styles.item}>
                                 <h2>Editar</h2>

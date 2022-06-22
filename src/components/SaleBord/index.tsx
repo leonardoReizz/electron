@@ -43,10 +43,7 @@ export function SaleBord() {
     ]
     ,[] );
     
-
     const columns = useColumns();
-   
-
     const table = useTable({ columns, data }, useSortBy);
 
     const {
@@ -58,81 +55,91 @@ export function SaleBord() {
     } = table;
     
     
-
-    
-    
     return (
         <>
             <div className={ styles.container }>
                 <div className={ styles.content }>
-                    <h1></h1>
-                    <div className={ styles.board }>
-                        <div className={ styles.navBoard }></div>
-                        <div className={ styles.tableBoard }>
-                            <table {...getTableProps()}>
-                                <thead>
-                                {headerGroups.map((headerGroup) => (
-                                    <tr {...headerGroup.getHeaderGroupProps()}>
-                                    {headerGroup.headers.map((column) => (
-                                        <th
-                                        {...column.getHeaderProps(column.getSortByToggleProps())}
-                                        className={
-                                            column.isSorted
-                                            ? column.isSortedDesc
-                                                ? "desc"
-                                                : "asc"
-                                            : ""
-                                        }
-                                        >
-                                        {column.render("Header")}
-                                        </th>
-                                    ))}
-                                    </tr>
-                                ))}
-                                </thead>
+                    <h2>Venda #0001</h2>
+                        <div className={styles.box}>
+                            <div className={styles.boxNav}>
+                                <button>
+                                    <img src="" alt="" />
+                                    Editar
+                                </button>
+                                <button>
+                                    <img src="" alt="" />
+                                    Deletar
+                                </button>
+                            </div>
+                            <div className={styles.sale}>
 
-                                <tbody {...getTableBodyProps()}>
-                                {
-                                    rows.map((row) => {
-                                    prepareRow(row);
-                                    return (
-                                        <tr {...row.getRowProps()}>
-                                        {
-                                            row.cells.map((cell) => {
-                                            return (
-                                                <td {...cell.getCellProps()}>
-                                                {
-                                                    cell.render("Cell")
-                                                }
-                                                </td>
-                                            );
-                                            })
-                                        }
+                            
+                                <div className={ styles.table }>
+                                <table {...getTableProps()}>
+                                    <thead>
+                                    {headerGroups.map((headerGroup) => (
+                                        <tr {...headerGroup.getHeaderGroupProps()}>
+                                        {headerGroup.headers.map((column) => (
+                                            <th
+                                            {...column.getHeaderProps(column.getSortByToggleProps())}
+                                            className={
+                                                column.isSorted
+                                                ? column.isSortedDesc
+                                                    ? "desc"
+                                                    : "asc"
+                                                : ""
+                                            }
+                                            >
+                                            {column.render("Header")}
+                                            </th>
+                                        ))}
                                         </tr>
-                                    );
-                                    })
-                                }
-                                </tbody>
-                            </table>
+                                    ))}
+                                    </thead>
+
+                                    <tbody {...getTableBodyProps()}>
+                                    {
+                                        rows.map((row) => {
+                                        prepareRow(row);
+                                        return (
+                                            <tr {...row.getRowProps()}>
+                                            {
+                                                row.cells.map((cell) => {
+                                                return (
+                                                    <td {...cell.getCellProps()}>
+                                                    {
+                                                        cell.render("Cell")
+                                                    }
+                                                    </td>
+                                                );
+                                                })
+                                            }
+                                            </tr>
+                                        );
+                                        })
+                                    }
+                                    </tbody>
+                                </table>
 
 
-                        </div>
-                        <div className={ styles.finalBoard }>
-                            <div className={ styles.subTotal }>
-                                <h3>Total</h3>
-                                <p>R$ 200,00</p>
                             </div>
-                            <div className={ styles.subTotal }>
-                                <h3>Taxa</h3>
-                                <p>R$ 20,00</p>
-                            </div>
-                            <div className={ styles.total }>
-                                <h3>Total</h3>
-                                <p>R$ 220,00</p>
-                            </div>
-                            <div className={ styles.buttons }>
-                                <button> Finalizar </button>
-                                <button> Cancelar </button>
+                            <div className={ styles.finalBoard }>
+                                <div className={ styles.subTotal }>
+                                    <h3>Total</h3>
+                                    <p>R$ 200,00</p>
+                                </div>
+                                <div className={ styles.subTotal }>
+                                    <h3>Taxa</h3>
+                                    <p>R$ 20,00</p>
+                                </div>
+                                <div className={ styles.total }>
+                                    <h3>Total</h3>
+                                    <p><span>R$</span> 220,00</p>
+                                </div>
+                                <div className={ styles.buttons }>
+                                    <button> Finalizar </button>
+                                    <button> Cancelar </button>
+                                </div>
                             </div>
                         </div>
                     </div>
