@@ -1,4 +1,4 @@
-import ClientProvider from "./context/useModal"
+import ClientProvider from "./hooks/useModal"
 import { AppRoutes } from "./Route"
 import "./styles/global.sass"
 

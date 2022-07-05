@@ -1,0 +1,52 @@
+
+@use "../../styles/_util" as *    
+.container
+    height: 100px
+    width: 100vw
+    display: flex
+    justify-content: center
+    align-items: center
+    .limit
+        max-width: 1280px
+        width: 100%
+        
+        .content
+            color: white
+            display: flex
+            justify-content: space-around
+            
+            .userInfo
+                display: flex
+                align-items: center
+                gap: 1rem
+                >img 
+                    height: 35px
+                    border-radius: 5rem
+                    border: 2px solid $green-200
+                p
+                    font-size: .9rem
+
+            .dayStatus
+                width: 100%
+                img
+                    height: 20px
+                    border-radius: 5rem
+                    margin-left: auto
+                .status
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    gap: .5rem
+                   
+                .data
+                    font-size: .9rem
+                    span
+                        margin-left: .3rem
+                        margin-right: .3rem
+                        color: $yellow-200
+                        font-size: 1.6rem
+                        line-height: 1rem
+                        
+                    
+
+

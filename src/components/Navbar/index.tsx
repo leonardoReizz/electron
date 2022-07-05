@@ -8,12 +8,15 @@ import chairIcon from "../../../public/assets/navbar/chair.png"
 import clientIcon from "../../../public/assets/navbar/client.png"
 import inventoryIcon from "../../../public/assets/navbar/inventory.png"
 import repostsIcon from "../../../public/assets/navbar/reposts.png"
+import { UserInfo } from "../UserInfo"
 
 
 export function Navbar(){
     return (
         <>
+            <UserInfo/>
             <div className={styles.container}>
+                <div className={styles.limit}>
                 <div className={styles.content}>
                     <div className={styles.navbar}>
                     <div className={styles.logo}>
@@ -86,12 +89,7 @@ export function Navbar(){
                         </div>  
                     </Link>  
                     </div>
-                    <Link to="/logout">
-                        <div className={styles.exitMenu}>
-                            <img src={exitIcon} alt="sair" />
-                            <p>Sair</p>
-                        </div>
-                    </Link>  
+                    </div>  
                 </div>
             </div>  
         </>

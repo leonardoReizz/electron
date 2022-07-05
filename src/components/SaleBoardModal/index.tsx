@@ -1,6 +1,6 @@
 import styles from './styles.module.sass';
 import ReactModal from 'react-modal';
-import { useModal } from '../../context/useModal';
+import { useModal } from '../../hooks/useModal';
 
 export function SaleBoardModal() {
     const{isOpenModal, closeModal} = useModal();

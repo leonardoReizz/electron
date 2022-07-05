@@ -1,102 +1,89 @@
 @use '../../styles/_util' as *
+
+
 .container
-    background : $gray-900
-    height: 100vh
-    width: 280px
+    height: 120px
+    width: 100vw
     position: fixed
-    
-    .content
-      height: 100vh
-      display: flex
-      flex-direction: column
-      justify-content: center
-
-      .navbar
+    display: flex
+    justify-content: center
+    .limit
+      max-width: 1444px
+      width: 100%
+      .content
+        height: 120px
+        border-radius: .5rem
+        background : $gray-900
         display: flex
-        flex-direction: column
-        align-items: center
+        flex-direction: row
+        justify-content: center
 
-        .logo  
-          margin-top: 2rem
-          margin-bottom: 2rem
-          color: $white
-          position: absolute
-          top: 0   
-          
-        :nth-child(2)
-          div
-            background: $green-200
-        :nth-child(3)
-          div
-            background: $red-200
-        :nth-child(4)
-          div
-            background: $purple-200
-        :nth-child(5)
-          div
-            background: $blue-200
-        :nth-child(6)
-          div
-            background: $yellow-200
-        :nth-child(7)
-          div
-            background: $blue-light-200
-        .box
+        .navbar
           display: flex
-          align-items: center
-          width: 250px
-          height: 100px
-
-          border-radius: 1rem
-          margin-top: 1rem
-          padding: 1rem
-          
-          color: $white
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.435))          
-          .boxIcon
+          flex-direction: row
+          gap: 1rem
+          .logo  
+            margin-top: 2rem
+            margin-bottom: 2rem
+            color: $white
+            position: absolute
+            top: 0   
+            
+          :nth-child(2)
+            div
+              background: $green-200
+          :nth-child(3)
+            div
+              background: $red-200
+          :nth-child(4)
+            div
+              background: $purple-200
+          :nth-child(5)
+            div
+              background: $blue-200
+          :nth-child(6)
+            div
+              background: $yellow-200
+          :nth-child(7)
+            div
+              background: $blue-light-200
+          .box
             display: flex
             align-items: center
-            justify-content: center
-            background: $white
-            width: 20px
-            height: 20px
-            border-radius: 8rem
-            margin-right: 1rem
-            padding: 2rem
+            width: 220px
+            height: 90px
 
-            img
-              vertical-align: middle
-             
-          .boxTitle
-              p
-                font-size: .8rem
+            border-radius: 1rem
+            margin-top: 1rem
+            padding: 1rem
+            
+            color: $white
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.435))          
+            .boxIcon
+              display: flex
+              align-items: center
+              justify-content: center
+              background: $white
+              width: 20px
+              height: 20px
+              border-radius: 8rem
+              margin-right: 1rem
+              padding: 1.5rem
 
-          transition: filter .3s
+              img
+                vertical-align: middle
+              
+            .boxTitle
+                h2
+                  font-size: 1.3rem
+                p
+                  font-size: .8rem
 
-          &:hover
-            filter: brightness(0.8)
+            transition: filter .3s
 
-      .exitMenu
-        display: flex
-        align-items: center
-        justify-content: center
-        position: absolute
-        
-        width: 280px
-        bottom: 2rem
-        left:0
+            &:hover
+              filter: brightness(0.8)
 
-        img
-          margin-right: 1rem
-          max-width: 50px
-        p
-          font-size: 1.2rem
-          color: $white
-
-        transition: filter 0.3s
-
-        &:hover
-          filter: brightness(0.8)
 @media (max-width: 1366px)
   .container
     width: 150px
