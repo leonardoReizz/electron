@@ -5,10 +5,85 @@
     display: flex
     flex-direction: column
     width: 100%
-    height: calc( 100vh - 300px )
+    height: calc( 100vh - 280px )
     h1
         color: $white
+    ::-webkit-scrollbar 
+        background-color: white
+        width: 10px
+        &-thumb
+            background-color: $orange-200
+            border-radius: 5rem
+  
+    
     .content
         height: 100%
         width: 100%
-        border: 1px solid red
+        border: 1px solid $orange-200
+        overflow: auto
+        border-top-left-radius: .5rem
+        border-bottom-left-radius: .5rem
+        padding: .5rem
+
+        .buttons
+            display: flex
+            justify-content: center
+
+            gap: 1rem
+            margin-top: 1rem
+            button
+                background: $blue-900
+                border: 1px solid $orange-200
+                padding: .5rem .5rem
+                border-radius: .5rem
+                color: $white
+                font-weight: bold
+                
+                transition: 0.3s ease-in-out
+
+                &.selected
+                    background: $orange-200
+                    color: $black
+                &:hover
+                    background: $orange-200
+                    color: $black
+
+    .footer
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        color: $white
+        padding: 0 1rem
+        height: 200px
+        margin-top: 2rem
+        gap: 1rem
+        div
+            display: flex
+            justify-content: space-between
+            width: 100%
+            border-bottom: 1px solid $white
+            padding: .5rem
+            & + div
+                margin-bottom: 2rem
+            input
+                background: none
+                color: $white
+                width: 70px
+                border: none
+                outline: none
+                font-size: 1.2rem
+                font-weight: bold
+                    
+        button
+            background: $orange-200
+            border: none
+            padding: 1rem
+            color: $white
+            font-weight: bold
+            border-radius: .5rem
+            
+
+            transition: 0.3s ease-in-out
+            &:hover
+                filter: brightness(0.7)
