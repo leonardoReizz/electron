@@ -9,13 +9,24 @@ import clientIcon from "../../../public/assets/navbar/client.png"
 import inventoryIcon from "../../../public/assets/navbar/inventory.png"
 import repostsIcon from "../../../public/assets/navbar/reposts.png"
 import { UserInfo } from "../UserInfo"
+import { useState } from "react"
 
 
 export function Navbar(){
+    const [navbarIsVisible, setNavbarIsVisible] = useState(false);
+
+    function handleNavbarVisible(){
+        setNavbarIsVisible(true);
+    }
+    function handleNavbarClose(){
+        setNavbarIsVisible(false);
+    }
     return (
         <>
-            <UserInfo/>
-            <div className={styles.container}>
+            <UserInfo handleNavbarVisible={handleNavbarVisible} handleNavbarClose={handleNavbarClose} navbarIsVisible={navbarIsVisible}/>
+            {
+                navbarIsVisible && (
+                    <div className={styles.container}>
                 <div className={styles.limit}>
                     <div className={styles.content}>
                         <div className={styles.navbar}>
@@ -89,6 +100,8 @@ export function Navbar(){
                     </div>  
                 </div>
             </div>  
+                )
+            }
         </>
     )
 }

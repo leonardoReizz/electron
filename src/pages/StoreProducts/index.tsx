@@ -1,13 +1,20 @@
 
-import styles from "./styles.module.sass"
+import { useState } from "react";
 
-import { SaleBoardModal } from "../../components/SaleBoardModal";
 import { Navbar } from "../../components/Navbar";
 import { SaleBoard } from "../../components/SaleBoard";
 import { Products } from "../../components/Products";
 
+import styles from "./styles.module.sass"
+
+
 interface productsProps {
     id: number
+}
+export interface IItem  {
+    nome: string
+    estoque: number
+    valor: number
 }
 export function StoreProducts(){
     const item = {
@@ -15,6 +22,18 @@ export function StoreProducts(){
         estoque: 30,
         valor: 9.90
     }
+     
+    const [listItems, setListItems ] = useState<IItem[]>([]);
+    const [listBuyItems, setListBuyItems] = useState([]);
+
+    function handleClickProduct(item: IItem){
+        setListItems([...listItems, item])
+    }
+    function handleChangeProducts(id: number){
+        //SetListItems
+    }
+
+
     return (
         <>
             <Navbar/>
@@ -23,23 +42,23 @@ export function StoreProducts(){
                     <div className={styles.content}> {/* centralizar a pagina */}
                         <div className={styles.boxOptions}>
                             <ul>
-                                <li><a href="#">Bebidas</a></li>
-                                <li><a href="#">Sobremesas</a></li>
-                                <li><a href="#">Pratos</a></li>
-                                <li><a href="#">Salgados</a></li>
+                                <li onClick={()=>handleChangeProducts(1)}>Bebidas</li>
+                                <li onClick={()=>handleChangeProducts(1)}>Sobremesas</li>
+                                <li onClick={()=>handleChangeProducts(1)}>Pratos</li>
+                                <li onClick={()=>handleChangeProducts(1)}>Salgados</li>
                             </ul>
                         </div>
                         <div className={styles.gridProducts}>
-                            <Products item={item}/>
-                            <Products item={item}/>
-                            <Products item={item}/>
-                            <Products item={item}/>
-                            <Products item={item}/>
-                            <Products item={item}/>
-                            <Products item={item}/>
+                            <Products item={item} handleClickProduct = {handleClickProduct}/>
+                            <Products item={item} handleClickProduct = {handleClickProduct}/>
+                            <Products item={item} handleClickProduct = {handleClickProduct}/>
+                            <Products item={item} handleClickProduct = {handleClickProduct}/>
+                            <Products item={item} handleClickProduct = {handleClickProduct}/>
+                            <Products item={item} handleClickProduct = {handleClickProduct}/>
+                            <Products item={item} handleClickProduct = {handleClickProduct}/>
                         </div>
                     </div>
-                    <SaleBoard/>
+                    <SaleBoard listItems={listItems}/>
                 </div>
             </div>
         </>

@@ -20,8 +20,8 @@ export default function ClientProvider ({children}: ModalProviderProps) {
 
     function openModal() {
         setIsOpenModal(true);
-        console.log("openModal");
     }
+    
     function closeModal() {
         setIsOpenModal(false);
     }

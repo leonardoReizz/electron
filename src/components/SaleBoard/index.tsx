@@ -1,16 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { array } from "yup";
+import { IItem } from "../../pages/StoreProducts";
 import { SaleBoardItem } from "./SaleBoardItem";
 import styles from "./styles.module.sass";
 
+interface SaleBoardProps{
+    listItems: IItem[];
+}
 
-
-export function SaleBoard(){
+export function SaleBoard({listItems}: SaleBoardProps){
     const [option, setOption] = useState<number>(1)
     const [desconto, setDesconto] = useState<string>("R$0.00")
+    const [array, setArray] = useState<string[]>([]);
+    const [total, setTotal] = useState<number>();
+
+    useEffect(() => {
+        let totalMap = 0
+        listItems.map((item)=>{
+            totalMap = totalMap + item.valor;
+        })
+        handleAmount(totalMap);
+    }, [listItems])
+    
+    function handleAmount(value: number){
+        const numberAmount = Number(value);
+        const rounded = Math.round(numberAmount * 1e8) / 1e8;
+        setTotal(rounded);
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-
                 <div className={styles.buttons}>
                     <button
                         className={option === 1 && styles.selected}
@@ -20,7 +40,7 @@ export function SaleBoard(){
                     </button>
                     <button
                         className={option === 2 && styles.selected}
-                        onClick={()=>setOption(2)}
+                         onClick={()=>setOption(2)}
                     >
                         Para Viagem
                     </button>
@@ -31,12 +51,13 @@ export function SaleBoard(){
                         Delivery
                     </button>
                 </div>
-
-                <SaleBoardItem/>
-                <SaleBoardItem/>
-                <SaleBoardItem/>
-                <SaleBoardItem/>
-                <SaleBoardItem/>
+                {
+                    listItems.map((item)=>{
+                        return(
+                            <SaleBoardItem item={item}/>
+                        )
+                    })
+                }
             </div>
             <div className={styles.footer}>
                 <div>
@@ -48,7 +69,7 @@ export function SaleBoard(){
                 </div>
                 <div>
                     <h4>Total</h4>
-                    <h3>R$ 0,00</h3>
+                    <h3>R$ {total}</h3>
                 </div>
                 <button>Continuar para pagamento</button>
             </div>

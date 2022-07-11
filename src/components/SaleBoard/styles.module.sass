@@ -5,7 +5,9 @@
     display: flex
     flex-direction: column
     width: 100%
-    height: calc( 100vh - 280px )
+    height: calc( 100vh - 100px )
+    max-height: 1000px
+    padding: 8px
     h1
         color: $white
     ::-webkit-scrollbar 
@@ -21,9 +23,7 @@
         width: 100%
         border: 1px solid $orange-200
         overflow: auto
-        border-top-left-radius: .5rem
-        border-bottom-left-radius: .5rem
-        padding: .5rem
+        border-radius: 16px
 
         .buttons
             display: flex
@@ -31,15 +31,16 @@
 
             gap: 1rem
             margin-top: 1rem
+
             button
                 background: $blue-900
                 border: 1px solid $orange-200
                 padding: .5rem .5rem
                 border-radius: .5rem
                 color: $white
-                font-weight: bold
+                font-size: .9rem
                 
-                transition: 0.3s ease-in-out
+                transition: background 0.2s, color 0.2s
 
                 &.selected
                     background: $orange-200
@@ -58,6 +59,7 @@
         height: 200px
         margin-top: 2rem
         gap: 1rem
+
         div
             display: flex
             justify-content: space-between
@@ -84,6 +86,6 @@
             border-radius: .5rem
             
 
-            transition: 0.3s ease-in-out
+            transition: filter 0.2s
             &:hover
                 filter: brightness(0.7)

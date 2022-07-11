@@ -7,8 +7,8 @@ export function SaleBoardModal() {
     return (
         <>
             <ReactModal 
-            isOpen={isOpenModal} 
-            onRequestClose={() => {}}
+                isOpen={isOpenModal} 
+                onRequestClose={() => {}}
             >
                 <h1 className={styles.title}>Ola mundos!</h1>
                 <button onClick={closeModal}>A</button>
