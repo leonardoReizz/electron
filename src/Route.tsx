@@ -19,7 +19,7 @@ export const AppRoutes = () => {
                 <Route path="/delivery" element = { <> <Navbar/> <Delivery/> </> } />
                 <Route path="/tables" element = { <> <Navbar/> <Tables/> </> }/>
                 <Route path="/clients" element = { <> <Navbar/> <Clients/> </> }/>
-                <Route path="/inventory" element = { <> <Navbar/> <Inventory/> </> } />
+                <Route path="/inventory" element = { <>  <Inventory/> </> } />
                 <Route path="/reports" element = { <> <Navbar/> <Reports/> </> } />
             </Routes>
         </HashRouter>

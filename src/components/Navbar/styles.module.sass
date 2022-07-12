@@ -20,8 +20,9 @@
 
       .content
         height: 120px
-        border-radius: .5rem
-        background : $gray-900
+        border-top-right-radius: .5rem
+        border-top-left-radius: .5rem
+        background: $black
         display: flex
         flex-direction: row
         justify-content: center
@@ -47,20 +48,20 @@
               background: $red-200
           :nth-child(3)
             div
-              background: $purple-200
+              background: $yellow-200
           :nth-child(4)
             div
               background: $blue-200
           :nth-child(5)
             div
-              background: $yellow-200
+              background: $purple-200
           :nth-child(6)
             div
               background: $blue-light-200
           .box
             display: flex
             align-items: center
-            width: 220px
+            width: 200px
             height: 90px
 
             border-radius: 1rem
@@ -94,9 +95,9 @@
               
             .boxTitle
                 h2
-                  font-size: 1.3rem
+                  font-size: 1rem
                 p
-                  font-size: .8rem
+                  font-size: .625rem
                 @media (max-width: 1194px)
                   display: none
 

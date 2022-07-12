@@ -24,8 +24,7 @@ export function Navbar(){
     return (
         <>
             <UserInfo handleNavbarVisible={handleNavbarVisible} handleNavbarClose={handleNavbarClose} navbarIsVisible={navbarIsVisible}/>
-            {
-                navbarIsVisible && (
+           
                     <div className={styles.container}>
                 <div className={styles.limit}>
                     <div className={styles.content}>
@@ -100,8 +99,7 @@ export function Navbar(){
                     </div>  
                 </div>
             </div>  
-                )
-            }
+            
         </>
     )
 }
