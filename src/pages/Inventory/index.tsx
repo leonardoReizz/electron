@@ -141,14 +141,11 @@ const getHoverBackgroundColor = (color: string, mode: string) =>
                                         <th>Referencia</th>
                                         <th>Valor de Compra</th>
                                         <th>Valor de Venda</th>
-                                        <th>Data de Criacão</th>
-                                        <th>Ultima Atualizacao</th>
-                                        <th>Amount</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
-                                        items.map((item)=>{
+                                        data.map((item)=>{
                                             return (
                                                 <tr>
                                                     <td>{item.id}</td>
@@ -156,9 +153,6 @@ const getHoverBackgroundColor = (color: string, mode: string) =>
                                                     <td>{item.barcode}</td>
                                                     <td>{item.puchasePrice}</td>
                                                     <td>{item.saleValue}</td>
-                                                    <td>{item.createdAt}</td>
-                                                    <td>{item.updatedAt}</td>
-                                                    <td>{item.amount}</td>
                                                 </tr>
                                             )
                                         })
